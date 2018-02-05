@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="CertificadosDigitaisPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>edu.ifba.hibernate.entidade.Administrador</class>
+    <class>edu.ifba.hibernate.entidade.Atividade</class>
+    <class>edu.ifba.hibernate.entidade.Autor</class>
+    <class>edu.ifba.hibernate.entidade.CategoriaAtividade</class>
+    <class>edu.ifba.hibernate.entidade.Certificado</class>
+    <class>edu.ifba.hibernate.entidade.Evento</class>
+    <class>edu.ifba.hibernate.entidade.Participacao</class>
+    <class>edu.ifba.hibernate.entidade.Participante</class>
+    <class>edu.ifba.hibernate.entidade.TipoParticipante</class>
+    <class>edu.ifba.hibernate.entidade.Trabalho</class>
+    <class>edu.ifba.hibernate.entidade.Carrinho</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <!--<property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql110039-certificadosonline.jelasticlw.com.br/certificado?zeroDateTimeBehavior=convertToNull"/>-->
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/certificados?zeroDateTimeBehavior=convertToNull"/>
+      <!--<property name="javax.persistence.jdbc.user" value="certificado"/>-->
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="1010010"/>
+      <property name="javax.persistence.lock.timeout" value="2"/>
+    </properties>
+  </persistence-unit>
+</persistence>

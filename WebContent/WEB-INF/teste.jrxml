@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-11-05T16:09:08 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teste" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15bde117-2148-485c-965a-817331870158">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="codigoAutenticacao" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT certificados.certificado.codigoAutenticacao,
+	certificados.certificado.data_criacao,
+	certificados.certificado.texto
+FROM certificados.certificado WHERE codigoAutenticacao LIKE  $P{codigoAutenticacao}]]>
+	</queryString>
+	<field name="codigoAutenticacao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_criacao" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="texto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572">
+			<image>
+				<reportElement x="-20" y="0" width="792" height="572" uuid="438a481c-ab57-43ce-9652-a2cb77b608dc"/>
+				<imageExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("imageFundo")]]></imageExpression>
+			</image>
+			<image scaleImage="RealHeight">
+				<reportElement x="40" y="480" width="160" height="50" uuid="4ebf112d-04ed-4a6d-a304-70144ce2e86f"/>
+				<imageExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("imageLogo")]]></imageExpression>
+			</image>
+			<image scaleImage="RealHeight">
+				<reportElement x="220" y="480" width="140" height="70" uuid="7e053477-954f-44f1-9ca3-cd08eb7d5a0a"/>
+				<box>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("imageEvento")]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="10" y="440" width="390" height="17" uuid="6a490380-4243-47fd-97b9-6eaf5b013bb7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Comic Sans MS" size="10" isBold="true" isItalic="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Validado na Coordenação de Extensão IFBA  Campus Santo Amaro]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="416" width="360" height="24" uuid="a598afe4-69f2-4089-8865-b097af8aa141"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="12" isBold="false" isItalic="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAutenticacao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="416" width="80" height="24" uuid="2c8394e6-30b4-47d5-9f4e-de11e3b71dc3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="12" isBold="false" isItalic="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Codigo/Nº:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="416" width="310" height="24" uuid="b5a9d68b-a2c8-4536-b0bb-d32f36c5acea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get( "dataCriacao" )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="226" width="650" height="190" uuid="473cbc0d-3f11-4bed-b97b-63d44a119f19"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="18" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{texto}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="RealHeight">
+				<reportElement x="380" y="480" width="140" height="70" uuid="110b441f-fe7a-42eb-9e48-77973f9bdd77"/>
+				<box>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("imageEvento")]]></imageExpression>
+			</image>
+			<image scaleImage="RealHeight">
+				<reportElement x="550" y="480" width="150" height="70" uuid="2f72adf8-518e-4c15-a6a9-49fe2466d916"/>
+				<box>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("imageEvento")]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="-2" y="180" width="752" height="70" uuid="25043644-1208-49b6-82e8-fc94f27339c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="25" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get( "evento" )]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<detail>
+		<band height="170"/>
+	</detail>
+</jasperReport>

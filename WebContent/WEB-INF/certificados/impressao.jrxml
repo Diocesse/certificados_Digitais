@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-09-15T16:19:38 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IMPRESSAO" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ddf89a62-09eb-42bc-8a64-faa787177429">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="diocesse"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2VydGlmaWNhZG9zLmNlcnRpZmljYWRvIEFTICwyMTcsODEsOTUyNjQxNWQtMGZlOS00NzdhLWI4&#xA;Y2ItYTgxN2ExNWU5MjlkOw=="/>
+	<queryString>
+		<![CDATA[SELECT certificados.certificado.`codigoAutenticacao`,
+	certificados.certificado.texto,
+	certificados.certificado.autor
+FROM certificados.certificado]]>
+	</queryString>
+	<title>
+		<band height="122">
+			<rectangle radius="5">
+				<reportElement mode="Transparent" x="300" y="30" width="390" height="78" uuid="e2ff0566-3216-42df-b4a0-07aa8455e7dc"/>
+				<graphicElement>
+					<pen lineStyle="Double" lineColor="#EDF0F0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="380" y="60" width="80" height="20" uuid="fb6ca100-8e69-4d2b-b5fa-8841b44178db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="12" isBold="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[CODIGO :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="60" width="290" height="20" uuid="daf11e8d-a0f1-4ff1-b5d7-2778f6e01007"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier 10 Pitch" size="13" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["xx-SELIC-LOGMAT-XX001"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="397" y="30" width="220" height="28" uuid="e0304b15-e0e1-45e4-a4ae-8883bf1ed4bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="16" isBold="true" isItalic="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO ONLINE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="80" width="364" height="28" uuid="a685b842-435b-4b7c-bc23-b554254a3ddf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="10" isBold="false" isItalic="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Validado na Coordenação de Extensão IFBA Campus Santo Amaro . 
+    Tel(75)32410845 Ramal 9612.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="160" height="64" uuid="c1dae313-a943-47e9-b214-f3d0aac0eb93"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA   ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="65">
+			<staticText>
+				<reportElement x="250" y="-10" width="438" height="61" forecolor="#0D37DE" uuid="11c39ce1-ae82-4de7-b7f6-c46f6f70bc78"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="46" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="113">
+			<textField>
+				<reportElement x="0" y="0" width="750" height="112" forecolor="#313322" uuid="c47cea24-796e-4f8d-bb03-68e10217e341"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="15" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Certificamos que LEANDRO DE SOUZA participou do “ II Seminário da Licenciatura em Computação II SELIC ” realizado no Instituto Federal de Educação, Ciências e Tecnologia da Bahia – IFBA campus Santo Amaro nos dias 19 e 20 de março de 2015, com carga horária de 16h."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
